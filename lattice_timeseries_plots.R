@@ -1,11 +1,10 @@
 require(zoo)
 require(Cairo)
 require(lattice)
-#require(grid)
 require(timeDate)
 
-d <- read.csv("/home/tavis/r_workspace/unit_stats_by_day.csv")
-order.stats <- zoo(base::cbind(d[2:47]), as.Date(d$day))
+df <- read.csv("/home/tavis/r_workspace/unit_stats_by_day.csv")
+order.stats <- zoo(base::cbind(df[2:47]), as.Date(df$day))
 
 ## http://stackoverflow.com/questions/1169376/cumulative-sums-moving-averages-and-sql-group-by-equivalents-in-r
 get.weeks <- function(x) {7 * ceiling(as.numeric(x-1)/7) + as.Date(3)}
@@ -26,7 +25,7 @@ order.stats.by.month <- by.month(order.stats)
 order.stats.by.qtr <- by.qtr(order.stats)
 
 ################################################################################
-#subset.cols <- c('orders', 'units', 'sales')
+
 subset.cols <- c('units', 'PFM', 'CAST_PARTIALS', 'CAPTEK')
 
 days <- time(order.stats)
@@ -41,13 +40,13 @@ monthticks <- monthboundaries[!jan]
 mlab <- substr(months(monthticks), 1, 1)
 
 plot.volume.ts <- function(data=by.week(order.stats[, subset.cols]),
-                      type="S",
+                      type="s",
                       show.trend=TRUE,
                       trend.span=1/10) {
   xyplot(data,
          plot.type = "multiple",
          type=type,
-         lwd=.3,
+         lwd=.5,
          main="Unit Volume By Product Type",
          ylab="Units",
          xlab="Month/Year",
