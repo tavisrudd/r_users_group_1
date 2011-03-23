@@ -245,7 +245,7 @@ Lots of interesting blogs:
 7.8 obj$attr NOT obj.attr 
 ==========================
 this.is.just.a.variable.name
-this_is_NOT_valid
+this_is_a_valid_varname for modern versions of R, but wasn't in the past
 
 7.9 a bit inconsistent and idiosyncratic, but awesome nonetheless 
 ==================================================================
