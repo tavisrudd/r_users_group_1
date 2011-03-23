@@ -16,13 +16,14 @@ chart.world.bank.celldata <- function (indicator="IT.CEL.SETS.P2",
   ## df stands for data.frame
   chart <- (
          ggplot(df, mapping=aes_string(x="year", y=indicator))
-         + aes(color=country) # aes stands for aesthetic
-         + geom_point(stat="identity")
-         + geom_smooth(stat="identity")
-         + theme_bw()
-         + opts(title=title)
-         + ylab(ylab)
-         + xlab("Year"))
+            + aes(color=country) # aes stands for aesthetic
+            + geom_point()
+            #+ geom_smooth()
+            + geom_line()
+            + theme_bw()
+            + opts(title=title)
+            + ylab(ylab)
+            + xlab("Year"))
   print(chart)
 }
 
