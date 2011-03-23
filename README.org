@@ -1,0 +1,96 @@
+* Useful Links
+https://bitbucket.org/tavisrudd/r_users_group_1/src
+https://bitbucket.org/tavisrudd/r_users_group_1/get/tip.zip
+https://bitbucket.org/tavisrudd/r_users_group_1/get/tip.tar.gz
+
+* What's with the microphone??
+** Sore arms from too much typing! 
+Please ignore it, and just focus on what commands I would have typed.
+
+
+
+* Introductions And A Quick Survey
+** Name and background
+** Experience with R?
+** Statistical training/experience?
+** Programming experience?
+** If no R experience, what have you heard about R?
+
+** If no R experience, what do you want to learn?
+
+* Thanks to our Sponsors!
+** Pulse Energy, our host
+** Revolution Analytics
+
+* Goals
+** Today  
+*** stoke your interest! 
+*** have some fun playing with it
+*** line up speakers for next meeting in May
+** For the Group
+*** Not just about R!
+ Data management, analysis and visualization in general
+*** meetings every 2 months
+*** mix of interactive sessions and talks
+* R as an Environment
+** long history (S, S-PLUS)
+** huge, rapidly growing community 
+thousands of libraries
+  http://crantastic.org/
+  http://cran.r-project.org/
+Lots of interesting blogs:
+  http://www.r-bloggers.com/
+  http://learnr.wordpress.com/
+
+** optimized for fast, INTERACTIVE data exploration
+** awesome help system
+** very easy to learn the basics, while doing useful things
+* A Few Quick Examples
+** employment data
+ [[file:unemployment.R::library(ggplot2)][unemployment]]
+
+** US crimes by state 
+[[file:murder.R::crime%20<-%20read.csv("http:/datasets.flowingdata.com/crimeRatesByState2008.csv",][ murder_vs_burglary]]
+
+** timeseries lattice graphics of sales data
+ [[file:lattice_timeseries_plots.R::require(zoo)][lattice_example]] 
+
+** Crayola colours over the years
+ [[file:crayola.R::library(Cairo)][crayola]]
+
+** calendar heat map of blog posts
+ [[file:life_sciences_heatmap.R::library(ggplot2)%20#%20also%20loads%20library%20plyr][heatmap]]
+* R as a Programming Language
+** assignment with <- instead of =
+** not zero indexed, starts at 1..
+** vector-based rather than scalar based (very important!)
+** functional, in a loose sense
+*** higher order functions
+*** lexical scoping 
+*** an "expression language"
+*** looping in R syntax is inefficient 
+... but there are higher order functions that make it very efficient and easy.
+*** not side-effect free, like Haskell or Erlang!
+** Very useful built-in data types (similar to Python)
+*** with a very useful vector/array/matrix slicing syntax
+** functions take keyword arguments, with optional defaults
+** "object-oriented", but with "generic functions"
+** obj$attr NOT obj.attr
+this.is.just.a.variable.name
+this_is_NOT_valid
+** a bit inconsistent and idiosyncratic, but awesome nonetheless
+* Exercises
+** import a small tabular / numeric dataset into R
+Preferably your own data from real life projects, but there is plenty
+of interesting CSV data on the web if you can't use your own.
+** print summary descriptive statistics of the data
+** examine the data structures that R stores it in
+** create subsets of it
+** create same basic charts of the data
+** if applicable, explore relationships in the data (correlation, etc.)
+* Resources
+** http://www.statmethods.net/index.html
+** http://www.r-tutor.com/ 
+* What's next???
+** A source of meeting / talk ideas:
+  http://www.meetup.com/R-Users/#past
