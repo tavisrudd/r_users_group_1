@@ -3,12 +3,6 @@ https://bitbucket.org/tavisrudd/r_users_group_1/src
 https://bitbucket.org/tavisrudd/r_users_group_1/get/tip.zip
 https://bitbucket.org/tavisrudd/r_users_group_1/get/tip.tar.gz
 
-* What's with the microphone??
-** Sore arms from too much typing! 
-Please ignore it, and just focus on what commands I would have typed.
-
-
-
 * Introductions And A Quick Survey
 ** Name and background
 ** Experience with R?
@@ -77,7 +71,7 @@ Lots of interesting blogs:
 ** "object-oriented", but with "generic functions"
 ** obj$attr NOT obj.attr
 this.is.just.a.variable.name
-this_is_NOT_valid
+this_is_a_valid_varname for modern versions of R, but wasn't in the past
 ** a bit inconsistent and idiosyncratic, but awesome nonetheless
 * Exercises
 ** import a small tabular / numeric dataset into R
