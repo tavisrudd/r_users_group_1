@@ -27,12 +27,12 @@ chart.world.bank.celldata <- function (indicator="IT.CEL.SETS.P2",
   print(chart)
 }
 
+chart.world.bank.celldata() # plots to screen
+
+################################################################################
 plot.to.png <- function (chart.callback, filename, width=1200, height=800) {
   chart.dev <- CairoPNG(filename=filename, width=width, height=height, bg="white")
   chart.callback()
   dev.off(chart.dev)
 }
-
-chart.world.bank.celldata() # plots to screen
-
 plot.to.png(chart.world.bank.celldata, "cellphone_chart.png")
